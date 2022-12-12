@@ -1,3 +1,8 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+
 import banner from './images/banner.jpg';
 import './App.css';
 
@@ -20,30 +25,23 @@ import CompEditarProductos from './productos/ModificarProductos';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-
-
-
-
-
 function App() {
   return (
     <div className="App">
       <header className="">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          <div class="container-fluid">
-            <a class="navbar-brand inactive">EL CORSO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/clientes">Clientes</a>
-                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/provedores">Provedores</a>
-                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/productos">Productos</a>
-              </div>
-            </div>
-          </div>
-        </nav>
+      <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand >EL CORSO</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/clientes/">Clientes</Nav.Link>
+            <Nav.Link href="/provedores/">Provedores</Nav.Link>
+            <Nav.Link href="/productos/">Productos</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
         <img src={banner} className="App-logo" alt="logo" />
       </header>
       <BrowserRouter>
