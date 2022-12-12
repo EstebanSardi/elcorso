@@ -1,8 +1,3 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-
 import banner from './images/banner.jpg';
 import './App.css';
 
@@ -24,24 +19,25 @@ import CompEditarProductos from './productos/ModificarProductos';
 //IMPORTAR EL ROUTER
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-
 function App() {
   return (
     <div className="App">
       <header className="">
-      <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand >EL CORSO</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/clientes/">Clientes</Nav.Link>
-            <Nav.Link href="/provedores/">Provedores</Nav.Link>
-            <Nav.Link href="/productos/">Productos</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+          <div class="container-fluid">
+            <a class="navbar-brand inactive">EL CORSO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/clientes/">Clientes</a>
+                <a class="nav-link active" aria-current="page" href="/provedores/">Provedores</a>
+                <a class="nav-link active" aria-current="page" href="/productos/">Productos</a>
+              </div>
+            </div>
+          </div>
+        </nav>
         <img src={banner} className="App-logo" alt="logo" />
       </header>
       <BrowserRouter>
@@ -62,7 +58,7 @@ function App() {
 
       </BrowserRouter>
       <body>
-        
+
       </body>
     </div>
   );
