@@ -37,9 +37,9 @@ function App() {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="http://localhost:3000/clientes">Clientes</a>
-                <a class="nav-link active" aria-current="page" href="http://localhost:3000/provedores">Provedores</a>
-                <a class="nav-link active" aria-current="page" href="http://localhost:3000/productos">Productos</a>
+                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/clientes">Clientes</a>
+                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/provedores">Provedores</a>
+                <a class="nav-link active" aria-current="page" href="http://172.173.138.200:3000/productos">Productos</a>
               </div>
             </div>
           </div>
