@@ -2,6 +2,10 @@ import banner from './images/banner.jpg';
 import './App.css';
 
 //IMPORTAR COMPONENTES
+
+import Home from './componentes/Home'; 
+
+
 import CompMostrarClientes from './clientes/MostrarClientes';
 import CompCrearClientes from './clientes/CrearClientes';
 import CompEditarClientes from './clientes/ModificarClientes';
@@ -23,25 +27,13 @@ function App() {
   return (
     <div className="App">
       <header className="">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          <div class="container-fluid">
-            <a class="navbar-brand inactive">EL CORSO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/clientes/">Clientes</a>
-                <a class="nav-link active" aria-current="page" href="/provedores/">Provedores</a>
-                <a class="nav-link active" aria-current="page" href="/productos/">Productos</a>
-              </div>
-            </div>
-          </div>
-        </nav>
         <img src={banner} className="App-logo" alt="logo" />
+        
       </header>
       <BrowserRouter>
         <Routes>
+          <Route path="/home" exact element={<Home/>}/>
+
           <Route path='/clientes/' element={<CompMostrarClientes />} />
           <Route path='/clientes/agregar' element={<CompCrearClientes />} />
           <Route path='/clientes/editar/:id' element={<CompEditarClientes />} />
